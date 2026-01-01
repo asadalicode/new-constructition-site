@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: #F7F7F7">
+    <header>
+        <div class="container">
+            <div class="header-box">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <div class="menu-box flex-fill">
+                    <nav class="navbar navbar-expand-lg display-lg">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="new-developments.html">New
+                                        Developments</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pre-construction.html">Pre Construction</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="brickellhouse.html">Brickell House</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dieselwynwood.html">Dieselwynwood</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="luxury-condos.html">Luxury Condos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="thebathclub.html">The Bath Club</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- <div class="display-sm nav-search">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-search.png" alt="">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end burger-menu">
+                            <div class="row justify-content-center flex-column align-items-center gap-3">
+                                <div class="col-md-12 mb-3">
+                                    <h3 class="text-center text-white fw-bold">Quick Search</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="search" aria-label="search" class="form-control"
+                                           placeholder="e.g.Icon Brickell/A4553454">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-blue-border-white w-100">Search by Condo / MLS # ></button>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div> -->
+                    <div class="display-sm nav-call">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-phone.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu phone-no-list">
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/usa-28x18.jpg" alt="USA">
+                                    <span>Miami +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/argentina-28x18.jpg" alt="Argentina">
+                                    <span>Buenos Aires +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/brazil-28x18.jpg" alt="Brazil">
+                                    <span>Curitiba +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img
+                                            src="images/icons/mexico-28x18.jpg" alt="Mexico">
+                                    <span>DF +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/venezuela-28x18.jpg" alt="Venezuela">
+                                    <span>Caracas +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/columbia-28x18.jpg" alt="Columbia">
+                                    <span>Bogotá +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-success mx-auto btn-icon my-3 w-300px"
+                                   onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=13058508140&amp;text=I am interested in Miami Residential');"
+                                   href="https://api.whatsapp.com/send?phone=+17867048705&amp;text=I am interested in Miami Residential">
+                                    <img src="images/icons/whatsapp-512.png" alt="">
+                                    <p class="m-0">WhatsApp</p>
+                                </a>
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+                    <!-- <div class="display-sm">
+                        <a class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="images/icons/icon-black-instagram.png" alt="">
+                        </a>
+                    </div> -->
+                    <div class="display-sm menu-list">
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-menu.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu ">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="new-developments.html">New
+                                Developments</a></li>
+                            <li><a class="dropdown-item" href="pre-construction.html">Pre Construction</a></li>
+                            <li><a class="dropdown-item" href="brickellhouse.html">Brickell House</a></li>
+                            <li><a class="dropdown-item" href="dieselwynwood.html">Dieselwynwood</a></li>
+                            <li><a class="dropdown-item" href="luxury-condos.html">Luxury Condos</a></li>
+                            <li><a class="dropdown-item" href="thebathclub.html">The Bath Club</a></li>
+                            <!-- <li>
+                                <p class="flag-box">
+                                    <a class="dropdown-item" href="#"><img src="images/icons/usa-28x18.jpg"
+                                                                           alt="">EN</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/spain.jpg" alt="">ES</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/brazil-28x18.jpg" alt="">PT</a>
+                                </p>
+                            </li> -->
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<section class="hero-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="title-1">Miami Real Estate News & Blog</h2>
+                <p>Latest Market Updates</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-md-9">
+                <div class=" bg-white p-4">
+                    <div class="row mb-3">
+                        <div class="col-md-12">
+                            <div class="post-card white-card">
+                                <a title="One Twenty Brickell Residences" class="post-info flex-shrink-0" href="#">
+                                    <img src="images/banners/01-Links-Estates-Building-790x360.jpg" alt=""
+                                         class="post-img">
+                                    <div class="building_info flex-fill">
+                                        <h2 class="post-title">Links Estates</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-line"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="post-card white-card">
+                                <a title="One Twenty Brickell Residences" class="post-info flex-shrink-0" href="#">
+                                    <img src="images/banners/01-Links-Estates-Building-790x360.jpg" alt=""
+                                         class="post-img">
+                                    <div class="building_info flex-fill">
+                                        <h2 class="post-title">Links Estates</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-line"></div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="post-card white-card">
+                                <a title="One Twenty Brickell Residences" class="post-info flex-shrink-0" href="#">
+                                    <img src="images/banners/01-Links-Estates-Building-790x360.jpg" alt=""
+                                         class="post-img">
+                                    <div class="building_info flex-fill">
+                                        <h2 class="post-title">Links Estates</h2>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-line"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <nav>
+                                <ul class="pagination c-pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active" aria-current="page">
+                                        <a class="page-link" href="#">2</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <ul class="social_networks">
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/LinkedIn.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/YouTube.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/TikTok.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-set-left">
+                    <div class="tel-divider">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <img src="images/icons/telephone-logo.jpg" alt="" style="width: 30px">
+                            <a class="text-decoration-none pe-4 text-black"
+                               href="tel:+17867048705">+1 786 704 8705</a>
+                        </div>
+                        <div>
+                            <a class="btn btn-green btn-icon"
+                               href="https://api.whatsapp.com/send?phone=17867048705&amp;text=I'm interested in">
+                                <img src="images/icons/whatsapp-512.png" alt="">
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white py-3 bg-black m-0">
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            ©2025 Miami Residential Group Inc.
+                        </h5>
+                    </li>
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            777 Brickell Ave #500 Miami, FL 33131
+                        </h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-content">
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-menu">
+                        <li><a href="/">HOME MRG</a></li>
+                        <li><a href="/property-search/">SEARCH</a></li>
+                        <li><a href="/new-developments/">NEW DEVELOPMENTS</a></li>
+                        <li><a href="/miami-homes/">HOUSES</a></li>
+                        <li><a href="/contact-us/">CONTACT </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <div class="old-footer-res">
+                        <img class="promo_logo" alt="Promo Logo" src="images/icons/logos-2016-2.png">
+                        <a href="javascript:void(0);">
+                            <img class="hilton_logo" alt="Hilton Logo" src="images/icons/hilton-2016-2.png">
+                        </a>
+                        <img alt="miami-new-logo" class="hilton_logo"
+                             src="images/icons/Miami-new-logo.png">
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="mobile-app-res">
+                        <a href="">
+                            <img alt="Get it on Google Play" style="margin:5px; max-height:40px;height: 40px;"
+                                 src="images/icons/footer-google-play-icon.png"></a>
+                        <a href="">
+                            <img alt="APP Store" style="margin:5px; max-height:40px;"
+                                 src="images/icons/footer-app-store-icon.png.png">
+                        </a>
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

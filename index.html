@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-New Construction Properties in Miami Dade</title>
+    <meta name="description"
+          content="Discover pre-new construction real estate properties in Miami Dade. Find your dream home before it’s built!">
+    <meta name="keywords" content="Pre-Construction, Real Estate, New Construction, Miami Dade">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: transparent !important;;
+        }
+
+        .heading {
+            font-size: 18px;
+        }
+
+        .para {
+            font-size: small;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ff582e !important;
+            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* .banner::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.3);;
+        } */
+        .banner-text {
+            position: relative;
+            color: #fff;
+            padding: 20px;
+            background-color: #ff582e !important;
+            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
+            /* padding-bottom: 0px; */
+            z-index: 2;
+
+
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 3; /* Ensures iframe is on top */
+        }
+
+        iframe {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 2;
+        }
+
+        .banner-content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            /* padding: 0 6px; */
+            /* position: absolute;
+            top: 70px; */
+            /* bottom: 140px; */
+            /* gap:12px */
+
+
+        }
+
+        .banner-content h3 {
+            position: absolute;
+            top: 0px;
+            color: #fff;
+            /* margin: auto; */
+        }
+
+        .call-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            z-index: 10;
+            font-weight: 600;
+            background-color: #ff582e !important;
+            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .call-button:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-box">
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+            <div class="menu-box flex-fill">
+                <nav class="navbar navbar-expand-lg display-lg">
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="new-developments.html">New
+                                    Developments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pre-construction.html">Pre Construction</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="brickellhouse.html">Brickell House</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dieselwynwood.html">Dieselwynwood</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="luxury-condos.html">Luxury Condos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="thebathclub.html">The Bath Club</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- <div class="display-sm nav-search">
+
+                    <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <img src="images/icons/icon-black-search.png" alt="">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end burger-menu">
+                        <div class="row justify-content-center flex-column align-items-center gap-3">
+                            <div class="col-md-12 mb-3">
+                                <h3 class="text-center text-white fw-bold">Quick Search</h3>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" name="search" aria-label="search" class="form-control"
+                                       placeholder="e.g.Icon Brickell/A4553454">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-blue-border-white w-100">Search by Condo / MLS # ></button>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-4">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div> -->
+                <div class="display-sm nav-call">
+
+                    <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <img src="images/icons/icon-black-phone.png" alt="">
+                    </button>
+                    <ul class="dropdown-menu  dropdown-menu-end burger-menu phone-no-list">
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img src="images/icons/usa-28x18.jpg" alt="USA">
+                                <span>Miami +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img src="images/icons/argentina-28x18.jpg" alt="Argentina">
+                                <span>Buenos Aires +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img src="images/icons/brazil-28x18.jpg" alt="Brazil">
+                                <span>Curitiba +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img
+                                        src="images/icons/mexico-28x18.jpg" alt="Mexico">
+                                <span>DF +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img src="images/icons/venezuela-28x18.jpg" alt="Venezuela">
+                                <span>Caracas +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="tel:+17867048705">
+                                <img src="images/icons/columbia-28x18.jpg" alt="Columbia">
+                                <span>Bogotá +1 786 704 8705</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-success mx-auto btn-icon my-3 w-300px"
+                               onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=13058508140&amp;text=I am interested in Miami Residential');"
+                               href="https://api.whatsapp.com/send?phone=+17867048705&amp;text=I am interested in Miami Residential">
+                                <img src="images/icons/whatsapp-512.png" alt="">
+                                <p class="m-0">WhatsApp</p>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <!-- <div class="display-sm">
+                    <a class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="images/icons/icon-black-instagram.png" alt="">
+                    </a>
+                </div> -->
+                <div class="display-sm menu-list">
+                    <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        <img src="images/icons/icon-black-menu.png" alt="">
+                    </button>
+                    <ul class="dropdown-menu  dropdown-menu-end burger-menu ">
+                        <li><a class="dropdown-item" href="index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="new-developments.html">New
+                            Developments</a></li>
+                        <li><a class="dropdown-item" href="pre-construction.html">Pre Construction</a></li>
+                        <li><a class="dropdown-item" href="brickellhouse.html">Brickell House</a></li>
+                        <li><a class="dropdown-item" href="dieselwynwood.html">Dieselwynwood</a></li>
+                        <li><a class="dropdown-item" href="luxury-condos.html">Luxury Condos</a></li>
+                        <li><a class="dropdown-item" href="thebathclub.html">The Bath Club</a></li>
+                        <!-- <li>
+                            <p class="flag-box">
+                                <a class="dropdown-item" href="#"><img src="images/icons/usa-28x18.jpg"
+                                                                       alt="">EN</a>
+                                <a class="dropdown-item" href="#"><img src="images/icons/spain.jpg" alt="">ES</a>
+                                <a class="dropdown-item" href="#"><img src="images/icons/brazil-28x18.jpg" alt="">PT</a>
+                            </p>
+                        </li> -->
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="banner">
+    <img src="banner.jpeg" alt="Pre-New Construction Properties in Miami Dade">
+
+
+    <div class="banner-content">
+        <h3>Dennis Morales - London foster</h3>
+        </h3>
+        <a href="tel:(786)7048705" class="call-button">Call Us Now: (786) 704 8705</a>
+    </div>
+    <!-- <div class="banner-text">
+        <h3 class="heading">Pre-New Construction Properties</h3>
+        <p class="para">Find your dream home before it’s built in Miami Dade!</p>
+    </div> -->
+</div>
+<div class="iframe-container">
+
+    <iframe id="NEOiframe"></iframe>
+</div>
+<script src="js/bootstrap.bundle.js"></script>
+<script async src="https://assets.newestateonly.com/iframe-loader/load.js" data-neokey="64d6fee5b9a0dc7f0225c8f1"
+        data-neolang="en"></script>
+</body>
+</html>

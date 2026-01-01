@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: #A6AEC1">
+    <header>
+        <div class="container">
+            <div class="header-box">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <div class="menu-box flex-fill">
+                    <nav class="navbar navbar-expand-lg display-lg">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="new-developments.html">New
+                                        Developments</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pre-construction.html">Pre Construction</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="brickellhouse.html">Brickell House</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dieselwynwood.html">Dieselwynwood</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="luxury-condos.html">Luxury Condos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="thebathclub.html">The Bath Club</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- <div class="display-sm nav-search">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-search.png" alt="">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end burger-menu">
+                            <div class="row justify-content-center flex-column align-items-center gap-3">
+                                <div class="col-md-12 mb-3">
+                                    <h3 class="text-center text-white fw-bold">Quick Search</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="search" aria-label="search" class="form-control"
+                                           placeholder="e.g.Icon Brickell/A4553454">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-blue-border-white w-100">Search by Condo / MLS # ></button>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div> -->
+                    <div class="display-sm nav-call">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-phone.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu phone-no-list">
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/usa-28x18.jpg" alt="USA">
+                                    <span>Miami +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/argentina-28x18.jpg" alt="Argentina">
+                                    <span>Buenos Aires +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/brazil-28x18.jpg" alt="Brazil">
+                                    <span>Curitiba +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img
+                                            src="images/icons/mexico-28x18.jpg" alt="Mexico">
+                                    <span>DF +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/venezuela-28x18.jpg" alt="Venezuela">
+                                    <span>Caracas +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/columbia-28x18.jpg" alt="Columbia">
+                                    <span>Bogotá +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-success mx-auto btn-icon my-3 w-300px"
+                                   onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=13058508140&amp;text=I am interested in Miami Residential');"
+                                   href="https://api.whatsapp.com/send?phone=+17867048705&amp;text=I am interested in Miami Residential">
+                                    <img src="images/icons/whatsapp-512.png" alt="">
+                                    <p class="m-0">WhatsApp</p>
+                                </a>
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+                    <!-- <div class="display-sm">
+                        <a class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="images/icons/icon-black-instagram.png" alt="">
+                        </a>
+                    </div> -->
+                    <div class="display-sm menu-list">
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-menu.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu ">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="new-developments.html">New
+                                Developments</a></li>
+                            <li><a class="dropdown-item" href="pre-construction.html">Pre Construction</a></li>
+                            <li><a class="dropdown-item" href="brickellhouse.html">Brickell House</a></li>
+                            <li><a class="dropdown-item" href="dieselwynwood.html">Dieselwynwood</a></li>
+                            <li><a class="dropdown-item" href="luxury-condos.html">Luxury Condos</a></li>
+                            <li><a class="dropdown-item" href="thebathclub.html">The Bath Club</a></li>
+                            <!-- <li>
+                                <p class="flag-box">
+                                    <a class="dropdown-item" href="#"><img src="images/icons/usa-28x18.jpg"
+                                                                           alt="">EN</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/spain.jpg" alt="">ES</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/brazil-28x18.jpg" alt="">PT</a>
+                                </p>
+                            </li> -->
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <img class="new-dev-banner" src="images/banners/Banner-Diesel.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-12 my-3">
+                <div class="text-center py-1" style="background: #DB001D">
+                    <img src="images/logo-diesel.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bg-white">
+                    <div class="row mb-3">
+                        <div class="col-md-5">
+                            <img src="images/banners/01-Diesel-Wynwood-Building.jpg" alt=""
+                                 class="h-300 w-100">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                <h2 class="title-2">Diesel Wynwood</h2>
+                                <h4>2006</h4>
+                                <p>8 Stories / 159 Residences of Studios, 1, 2 & 3 Bedrooms</p>
+                                <p>148 NW 28th St, Miami, FL 33127, USA</p>
+                                <p>Average Price: $1,300 x SF ($13,993 x M2)</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="bg-white p-3">
+                    <p class="m-0">
+                        Diesel Wynwood Residences offers a smart and paradigm-shifting living in the heart of Miami’s
+                        art-centric Wynwood District. The visionary team of Zyscovich Architects designed an 8-story
+                        building full of audacity and playfulness, with steel pillars which allow for pedestrians to
+                        enjoy an outdoor piazza. Overhead, neon structural beams form an iconic geometric symbol that
+                        enhances the building’s uniqueness and gives a glimpse into the exclusive design found within.
+                        The Diesel Wynwood building also boasts extensive amenities, including a pool, open-air art
+                        gallery, spa, meditation room, fitness center, art studio, co-working spaces and much more.
+                        Residences exceed expectations, with luxury design collaborations, high ceilings and
+                        sustainability. The building is located at the center of a premier destination for world-class
+                        dining, global entertainment, international events, art, fashion, design, innovation and
+                        creative enterprise.
+
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12 my-3">
+                <div class="bg-blue py-3 text-center">
+                    <h6 class="m-0">FLOOR PLANS</h6>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Prices & General Information</h5>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-2 my-3">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/banners/06-Diesel-Wynwood-Pool.jpg" alt=""
+                         class="h-300 w-100">
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fw-semibold">
+                        <p class="m-0">
+                            Architect/s: Zyscovich Architects
+                        </p>
+                        <p>
+                            Developed by Bel Invest
+                        </p>
+                        <p class="m-0">
+                            This property has units available for sale starting at $520,000. Please contact
+                            us for more information.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Features</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="bg-white p-2 my-3 h-100">
+                    <h5 class="fw-semibold mt-2 ms-2">Building Features</h5>
+                    <ul class="fw-semibold m-0">
+                        <li>Penthouses with private rooftop terraces</li>
+                        <li>LEED &amp; WELL Certified</li>
+                        <li>Outdoor courtyard with lush landscaping</li>
+                        <li>Bold design-forward interiors by Diesel Living</li>
+                        <li> Modern Rooftop Pool Deck &amp; Lounge</li>
+                        <li>Indoor living room, dining room &amp; full kitchen</li>
+                        <li>Cocktail bar</li>
+                        <li>Open-air art gallery</li>
+                        <li>European-Inspired Spa</li>
+                        <li>Sensory Room</li>
+                        <li>Digitally connected concierge &amp; amenities</li>
+                        <li>24-hour valet</li>
+                        <li>2 high-speed elevators</li>
+                        <li>High-speed wifi in all community spaces</li>
+                        <li>Electric car charging stations</li>
+                        <li>Private bicycle &amp; storage spaces</li>
+                        <li>Pet friendly</li>
+                        <li>Fitness center with cardio &amp; weight-training machine</li>
+                        <li>Flexible space for yoga, movement, boxing &amp; dance</li>
+                        <li>Dedicated space for painting, sculpture, photography,
+                            design or other artistic pursuits
+                        </li>
+                        <li>Co-working suite with business center tools &amp; services</li>
+                        <li>Lobby-level conference room with customizable
+                            flex-space design
+                        </li>
+                        <li>Wine Cellar/Cigar Room/Library</li>
+                        <li>Secure personalized lock-box storage with climate control</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white p-2 my-3 h-100">
+                    <h5 class="fw-semibold mt-2 ms-2">Residence Features</h5>
+                    <ul class="fw-semibold m-0">
+                        <li>Berti flooring in all residences</li>
+                        <li>Scavolini custom cabinetry</li>
+                        <li>Brizo faucets &amp; fixtures</li>
+                        <li>Corian kitchen countertops</li>
+                        <li>Nero bathroom countertops</li>
+                        <li>IRIS kitchen &amp; bathroom tiles</li>
+                        <li>Lodes lighting</li>
+                        <li>Premium Italian wood interior doors</li>
+                        <li>Moroso furniture</li>
+                        <li>Saletti tableware &amp; accessories</li>
+                        <li>Poliform closets</li>
+                        <li>WELL CERTIFIED:</li>
+                        <li>Water - it covers aspects of the quality, distribution &amp; control of liquid water in the
+                            building
+                        </li>
+                        <li>Light - it promotes exposure to light &amp; aims to create lighting environments that
+                            promote visual, mental &amp; biological health
+                        </li>
+                        <li>Air - it assures high levels of indoor air quality across the building’s lifetime through
+                            diverse strategies
+                        </li>
+                        <li>Thermal comfort - aims to promote human productivity
+                            &amp; provide a maximum level of thermal comfort among all building users through an
+                            enhanced HVAC system design &amp; control by meeting individual thermal preferences
+                        </li>
+                        <li>Movement - promotes daily physical activity through environmental design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-md-12">
+                <img class="new-dev-banner" src="images/banners/32-Diesel-Wynwood-Bedroom-e1678238509356.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Location</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7184.049411351114!2d-80.19805700000002!3d25.802759!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6ad67ecac11%3A0x68965b4abc7fde88!2s148%20NW%2028th%20St%2C%20Miami%2C%20FL%2033127!5e0!3m2!1sen!2sus!4v1729074992768!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Floor Plans</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-6 pe-md-0">
+                <img name="Bath Club" src="images/banners/Keyplan-Diesel-1.jpg" width="100%" height="100%" alt="">
+            </div>
+            <div class="col-md-6 ps-md-0">
+                <div class="keyplan-table">
+                    <table class="table table-dark m-0">
+                        <thead>
+                        <tr>
+                            <td>FLOOR / UNITS</td>
+                            <td>BEDS / BATHS</td>
+                            <td>TOTAL RESIDENCE</td>
+                            <td>FLOOR PLANS</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Residence A1</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>508 SF / 47.3 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence A2</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>528 SF / 49.1 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence A3</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>644 SF / 60 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence A4</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>506 SF / 47.2 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence B1</td>
+                            <td>1 Bed / 1 Bath</td>
+                            <td>713 SF / 66.3 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence B2</td>
+                            <td>1 Bed / 2 Baths</td>
+                            <td>731 SF / 68 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence B3</td>
+                            <td>1 Bed / 2 Baths</td>
+                            <td>1111 SF / 103.3 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence B4</td>
+                            <td>1 Bed / 2 Baths</td>
+                            <td>773 SF / 71.9 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence B7</td>
+                            <td>1 Bed / 2 Baths</td>
+                            <td>956 SF / 88.9 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence C1</td>
+                            <td>1 Bed + Den / 2 Baths</td>
+                            <td>1124 SF / 104.5 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence D3</td>
+                            <td>2 Beds / 3 Baths</td>
+                            <td>1502 SF / 139.6 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence D4</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>580.5 SF / 54 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence D4.1</td>
+                            <td>1 Bed / 1 Bath</td>
+                            <td>850 SF / 79 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence D6</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>717.5 SF / 66.7 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence D6.1</td>
+                            <td>Studio / 1 Bath</td>
+                            <td>564.5 SF / 52.5 M2</td>
+                            <td><a target="_blank"
+                                   href="f">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence E1</td>
+                            <td>2 Beds / 2 Baths</td>
+                            <td>1298 SF / 120.7 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence E2</td>
+                            <td>2 Beds + Den / 3 Baths</td>
+                            <td>1193 SF / 110.9 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence E3</td>
+                            <td>2 Beds + Den / 3 Baths</td>
+                            <td>1555 SF / 144.6 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence E4</td>
+                            <td>2 Beds + Den / 3 Baths</td>
+                            <td>1594 SF / 148.2 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Residence E5</td>
+                            <td>2 Beds + Den / 2 Baths</td>
+                            <td>1406 SF / 130.7 M2</td>
+                            <td><a target="_blank"
+                                   href="">Download</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Developers</h5>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-2 my-3">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/banners/Developer-Bel-Invest.jpg" alt=""
+                         class="h-300 w-100">
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fw-semibold">
+                        <p class="m-0">
+                            Bel-Invest is a real estate development company founded in 2005 in Vicenza by German-Italian entrepreneur Maximilian Beltrame. The company has successfully developed various transformative projects. In recent years, Bel-Invest has expanded into Italy, Spain and Miami. Their goal is to ensure a constant increase in the value and profitability of the properties managed, creating attractive profit opportunities for our partners. We focus our resources exclusively on investment opportunities that guarantee the best performance.
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Videos</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-12">
+                <iframe class="video1" src="https://www.youtube.com/embed/luOhSbkRzew" width="100%" height="340" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Contact Us
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="bg-white h-100">
+                    <img src="images/banners/contactimage-blanco.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white h-100">
+
+                </div>
+            </div>
+            <div class="col-md-12 mt-3">
+                <img src="images/banners/Banner-Bath-Club-2021.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 my-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="bg-blue py-3 text-center">
+                        <h6 class="m-0">Other Condos by area</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 my-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="bg-blue py-3 text-center">
+                        <h6 class="m-0">Other Miami Beach Condos</h6>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <ul class="social_networks">
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/LinkedIn.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/YouTube.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/TikTok.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-set-left">
+                    <div class="tel-divider">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <img src="images/icons/telephone-logo.jpg" alt="" style="width: 30px">
+                            <a class="text-decoration-none pe-4 text-black"
+                               href="tel:+17867048705">+1 786 704 8705</a>
+                        </div>
+                        <div>
+                            <a class="btn btn-green btn-icon"
+                               href="https://api.whatsapp.com/send?phone=17867048705&amp;text=I'm interested in">
+                                <img src="images/icons/whatsapp-512.png" alt="">
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white py-3 bg-black m-0">
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            ©2025 Miami Residential Group Inc.
+                        </h5>
+                    </li>
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            777 Brickell Ave #500 Miami, FL 33131
+                        </h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-content">
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-menu">
+                        <li><a href="/">HOME MRG</a></li>
+                        <li><a href="/property-search/">SEARCH</a></li>
+                        <li><a href="/new-developments/">NEW DEVELOPMENTS</a></li>
+                        <li><a href="/miami-homes/">HOUSES</a></li>
+                        <li><a href="/contact-us/">CONTACT </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <div class="old-footer-res">
+                        <img class="promo_logo" alt="Promo Logo" src="images/icons/logos-2016-2.png">
+                        <a href="javascript:void(0);">
+                            <img class="hilton_logo" alt="Hilton Logo" src="images/icons/hilton-2016-2.png">
+                        </a>
+                        <img alt="miami-new-logo" class="hilton_logo"
+                             src="images/icons/Miami-new-logo.png">
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="mobile-app-res">
+                        <a href="">
+                            <img alt="Get it on Google Play" style="margin:5px; max-height:40px;height: 40px;"
+                                 src="images/icons/footer-google-play-icon.png"></a>
+                        <a href="">
+                            <img alt="APP Store" style="margin:5px; max-height:40px;"
+                                 src="images/icons/footer-app-store-icon.png.png">
+                        </a>
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

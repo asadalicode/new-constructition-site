@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>New Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: #A6AEC1">
+    <header>
+        <div class="container">
+            <div class="header-box">
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <div class="menu-box flex-fill">
+                    <nav class="navbar navbar-expand-lg display-lg">
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="new-developments.html">New
+                                        Developments</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pre-construction.html">Pre Construction</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="brickellhouse.html">Brickell House</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="dieselwynwood.html">Dieselwynwood</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="luxury-condos.html">Luxury Condos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="thebathclub.html">The Bath Club</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- <div class="display-sm nav-search">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-search.png" alt="">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end burger-menu">
+                            <div class="row justify-content-center flex-column align-items-center gap-3">
+                                <div class="col-md-12 mb-3">
+                                    <h3 class="text-center text-white fw-bold">Quick Search</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" name="search" aria-label="search" class="form-control"
+                                           placeholder="e.g.Icon Brickell/A4553454">
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-blue-border-white w-100">Search by Condo / MLS # ></button>
+                                </div>
+                                <hr>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+    
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div> -->
+                    <div class="display-sm nav-call">
+    
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-phone.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu phone-no-list">
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/usa-28x18.jpg" alt="USA">
+                                    <span>Miami +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/argentina-28x18.jpg" alt="Argentina">
+                                    <span>Buenos Aires +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/brazil-28x18.jpg" alt="Brazil">
+                                    <span>Curitiba +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img
+                                            src="images/icons/mexico-28x18.jpg" alt="Mexico">
+                                    <span>DF +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/venezuela-28x18.jpg" alt="Venezuela">
+                                    <span>Caracas +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="tel:+17867048705">
+                                    <img src="images/icons/columbia-28x18.jpg" alt="Columbia">
+                                    <span>Bogotá +1 786 704 8705</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn btn-success mx-auto btn-icon my-3 w-300px"
+                                   onclick="return gtag_report_conversion('https://api.whatsapp.com/send?phone=13058508140&amp;text=I am interested in Miami Residential');"
+                                   href="https://api.whatsapp.com/send?phone=+17867048705&amp;text=I am interested in Miami Residential">
+                                    <img src="images/icons/whatsapp-512.png" alt="">
+                                    <p class="m-0">WhatsApp</p>
+                                </a>
+                            </li>
+                        </ul>
+    
+    
+                    </div>
+                    <!-- <div class="display-sm">
+                        <a class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <img src="images/icons/icon-black-instagram.png" alt="">
+                        </a>
+                    </div> -->
+                    <div class="display-sm menu-list">
+                        <button class="btn btn-menu dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            <img src="images/icons/icon-black-menu.png" alt="">
+                        </button>
+                        <ul class="dropdown-menu  dropdown-menu-end burger-menu ">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="new-developments.html">New
+                                Developments</a></li>
+                            <li><a class="dropdown-item" href="pre-construction.html">Pre Construction</a></li>
+                            <li><a class="dropdown-item" href="brickellhouse.html">Brickell House</a></li>
+                            <li><a class="dropdown-item" href="dieselwynwood.html">Dieselwynwood</a></li>
+                            <li><a class="dropdown-item" href="luxury-condos.html">Luxury Condos</a></li>
+                            <li><a class="dropdown-item" href="thebathclub.html">The Bath Club</a></li>
+                            <!-- <li>
+                                <p class="flag-box">
+                                    <a class="dropdown-item" href="#"><img src="images/icons/usa-28x18.jpg"
+                                                                           alt="">EN</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/spain.jpg" alt="">ES</a>
+                                    <a class="dropdown-item" href="#"><img src="images/icons/brazil-28x18.jpg" alt="">PT</a>
+                                </p>
+                            </li> -->
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <img class="new-dev-banner" src="images/banners/Banner-The-Bath-Club.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-12 my-3">
+                <div class="text-center bg-white py-1">
+                    <img src="images/logo-bathclub.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bg-white">
+                    <div class="row mb-3">
+                        <div class="col-md-5">
+                            <img src="images/banners/01-Links-Estates-Building-790x360.jpg" alt=""
+                                 class="h-300 w-100">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="d-flex flex-column justify-content-end align-items-end h-100 p-3">
+                                <h2 class="title-2">The Bath Club Miami Beach</h2>
+                                <h4>Miami Beach / 2005</h4>
+                                <p>19 Stories / 112 Residences of 1, 2, 3, 4 & 5 Bedrooms </p>
+                                <p>5959 Collins Ave, Miami Beach, FL 33140, USA</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="bg-white p-3">
+                    <p class="m-0">
+                        The Bath Club perfectly defines Miami Beach condo's must-haves: superb units, great and uncommon
+                        amenities, incomparable location and tropical ambiance. Formed in 1926 and perfected in 2005,
+                        this condominium is full of details and continually reinveinting itself. The level of the
+                        features, services and amenities is the finest, it also offers easy access to shops, cultural
+                        destinations, restaurants and nightlife. The common areas were built and decorated with a
+                        Mediterranean Revival flair.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-3 my-3">
+                <div class="bg-blue py-3 text-center">
+                    <h6 class="m-0">CONDOS FOR SALE</h6>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="bg-blue py-3 text-center">
+                    <h6 class="m-0">CONDOS FOR RENT</h6>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="bg-blue py-3 text-center">
+                    <h6 class="m-0">CONDOS SOLD/RENTED</h6>
+                </div>
+            </div>
+            <div class="col-md-3 my-3">
+                <div class="bg-blue py-3 text-center">
+                    <h6 class="m-0">FLOOR PLANS</h6>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Prices & General Information</h5>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white p-2 my-3">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/banners/01-Links-Estates-Building-790x360.jpg" alt=""
+                         class="h-300 w-100">
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column justify-content-end h-100 p-3 fw-semibold">
+                        <p class="m-0">Architect/s: Revuelta Vega Leon, P.A</p>
+                        <p>Developed by Peebles Atlantic Development</p>
+                        <p class="m-0">3 Condos For Sale, from $4,750,000 to $7,599,000</p>
+                        <p>2 Condos For Rent, from $18,000 to $39,000</p>
+                        <p class="m-0">Average Listing: $1,623 x SF</p>
+                        <p>Average Sale: $1,511 x SF</p>
+                        <h5>Average Price: $1,566 X SF
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Features</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="bg-white p-2 my-3 h-100">
+                    <h5 class="fw-semibold mt-2 ms-2">Building Features</h5>
+                    <ul class="fw-semibold m-0">
+                        <li>Formal ballrooms / billiards and game room</li>
+                        <li>Swimming pool with cabanas</li>
+                        <li>Two clay tennis courts and a tennis pro</li>
+                        <li>Spa featuring personal trainers</li>
+                        <li>Outdoor hot tub</li>
+                        <li>Full-service concierge</li>
+                        <li>Valet service</li>
+                        <li>Maid service (upon request)</li>
+                        <li>24-hour security</li>
+                        <li>Business center</li>
+                        <li>Gourmet market and newsstand</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white p-2 my-3 h-100">
+                    <h5 class="fw-semibold mt-2 ms-2">Residence Features</h5>
+                    <ul class="fw-semibold m-0">
+                        <li>Eight custom floor plan selections</li>
+                        <li>Nature: natural woods and stones to conjure an organic vibe</li>
+                        <li>Classic: dark woods and French limestone to complement a traditional lifestyle</li>
+                        <li>Culture: for the eccentric art collector feel</li>
+                        <li>Minimal: sleek lines, neutral tones and a Zen aura</li>
+                        <li>Large walk-in closets</li>
+                        <li>Glass designed to meet new South Florida hurricane impact resistance</li>
+                        <li>Built-in refrigerator-freezer</li>
+                        <li>European cabinetry</li>
+                        <li>Italian stone slab kitchen countertops</li>
+                        <li>Italian Marble flooring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-4">
+            <div class="col-md-12">
+                <img class="new-dev-banner" src="images/banners/Banner-The-Bath-Club.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Location</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7181.676179697238!2d-80.120969!3d25.84188!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b363df088ef9%3A0x27a6db22a86a2d75!2s5959%20Collins%20Ave%2C%20Miami%20Beach%2C%20FL%2033140!5e0!3m2!1sen!2sus!4v1728907781163!5m2!1sen!2sus"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Floor Plans</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-6 pe-md-0">
+                <img name="Bath Club" src="images/banners/Bath-Club.jpg" width="100%" height="100%" alt="">
+            </div>
+            <div class="col-md-6 ps-md-0">
+                <div class="keyplan-table">
+                    <table class="table table-dark m-0">
+                        <thead>
+                        <tr>
+                            <td>FLOOR / UNITS</td>
+                            <td>BEDS / BATHS</td>
+                            <td>TOTAL RESIDENCE</td>
+                            <td>FLOOR PLANS</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Unit A-01</td>
+                            <td>2 Beds / 3-1/2 Baths</td>
+                            <td>2553 SF / 237.20 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit B-02</td>
+                            <td>2 Beds / 4-1/2 Baths</td>
+                            <td>2878 SF / 268.37 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit C-03</td>
+                            <td>3 + Den Beds / 4-1/2 Baths</td>
+                            <td>4148 SF / 385.36 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit D-04</td>
+                            <td>3 Beds / 3-1/2 Baths</td>
+                            <td>4479 SF / 416.10 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit E-05</td>
+                            <td>4 Beds + Den / 4-1/2 Baths</td>
+                            <td>4358 SF / 404.87 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit F-06</td>
+                            <td>3 Beds / 4-1/2 Baths</td>
+                            <td>4729 SF / 439.33 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit G-07</td>
+                            <td>2 Beds + Den / 3-1/2 Baths</td>
+                            <td>1041 SF / 96.71 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Unit H-08</td>
+                            <td>1 Beds / 2-1/2 Baths</td>
+                            <td>2374 SF / 220.90 M2</td>
+                            <td><a target="_blank" href="#">Download</a>
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Videos</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-md-12">
+                <iframe class="video1" width="100%" height="260" src="https://www.youtube.com/embed/o8LQfgm6r94"
+                        frameborder="0" allowfullscreen=""></iframe>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">For Sale</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="property_table">
+                    <h3>3 Bedrooms</h3>
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark ">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1904</td>
+                            <td>$7,000,000</td>
+                            <td>3982</td>
+                            <td>$1,758</td>
+
+                            <td style="width: 180px">
+                                <a class="btn btn-blue px-5" href="/miami-condo/miami-beach/bath-club/A11649312/">+
+                                    Info</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>4 Bedrooms</h3>
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark ">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>705</td>
+                            <td>$4,750,000</td>
+                            <td>3807</td>
+                            <td>$1,248</td>
+
+                            <td style="width: 180px">
+                                <a class="btn btn-blue px-5" href="/miami-condo/miami-beach/bath-club/A11649312/">+
+                                    Info</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1606</td>
+                            <td>$7,599,000</td>
+                            <td>4135</td>
+                            <td>$1,838</td>
+
+                            <td style="width: 180px">
+                                <a class="btn btn-blue px-5" href="/miami-condo/miami-beach/bath-club/A11649312/">+
+                                    Info</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">For Rent</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="property_table">
+                    <h3>3 Bedrooms</h3>
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark ">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1002</td>
+                            <td>$18,000</td>
+                            <td>2572</td>
+                            <td>$7</td>
+
+                            <td style="width: 180px"><a class="btn btn-blue px-5"
+                                                        href="/miami-rental/miami-beach/bath-club/A11529169/">+ Info</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h3>4 Bedrooms</h3>
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark ">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+
+                            <td></td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1606</td>
+                            <td>$39,000</td>
+                            <td>4135</td>
+                            <td>$9</td>
+
+                            <td style="width: 180px"><a class="btn btn-blue px-5"
+                                                        href="/miami-rental/miami-beach/bath-club/A11398695/">+ Info</a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Sold</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="property_table">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+                            <td>Sale Date</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>907</td>
+                            <td>$4,300,000</td>
+                            <td>2959 SF</td>
+                            <td>$1,453</td>
+                            <td>08/22/2024</td>
+                        </tr>
+                        <tr>
+                            <td>1106</td>
+                            <td>$6,500,000</td>
+                            <td>4135 SF</td>
+                            <td>$1,572</td>
+                            <td>07/02/2024</td>
+                        </tr>
+                        <tr>
+                            <td>1107</td>
+                            <td>$4,855,000</td>
+                            <td>2959 SF</td>
+                            <td>$1,641</td>
+                            <td>06/10/2024</td>
+                        </tr>
+                        <tr>
+                            <td>1703</td>
+                            <td>$5,100,000</td>
+                            <td>3640 SF</td>
+                            <td>$1,401</td>
+                            <td>05/29/2024</td>
+                        </tr>
+                        <tr>
+                            <td>1802</td>
+                            <td>$4,370,000</td>
+                            <td>2572 SF</td>
+                            <td>$1,699</td>
+                            <td>04/22/2024</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Rented</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="property_table">
+                    <table class="table table-bordered text-center">
+                        <thead class="table-dark">
+                        <tr>
+                            <td>Unit</td>
+                            <td>Price</td>
+                            <td>SF</td>
+                            <td>$/SF</td>
+                            <td>Rented Date</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>PH2007</td>
+                            <td>$27,000</td>
+                            <td>2959 SF</td>
+                            <td>$9</td>
+                            <td>09/01/2024</td>
+                        </tr>
+                        <tr>
+                            <td>606</td>
+                            <td>$26,500</td>
+                            <td>4135 SF</td>
+                            <td>$6</td>
+                            <td>07/19/2024</td>
+                        </tr>
+                        <tr>
+                            <td>1807</td>
+                            <td>$200,000</td>
+                            <td>2959 SF</td>
+                            <td>$68</td>
+                            <td>06/12/2024</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <img src="images/banners/02-The-Bath-Club-Pool.jpg" width="100%" alt="">
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col-md-12">
+                <div class="py-3" style="background: #a0a0a0">
+                    <h5 class="text-center text-white m-0">Contact Us
+                    </h5>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="bg-white h-100">
+                    <img src="images/banners/contactimage-blanco.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-white h-100">
+
+                </div>
+            </div>
+            <div class="col-md-12 mt-3">
+                <img src="images/banners/Banner-Bath-Club-2021.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 my-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="bg-blue py-3 text-center">
+                        <h6 class="m-0">Other Condos by area</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 my-3">
+                <a href="#" class="text-decoration-none">
+                    <div class="bg-blue py-3 text-center">
+                        <h6 class="m-0">Other Miami Beach Condos</h6>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div>
+                    <ul class="social_networks">
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Facebook.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/Instagram.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/LinkedIn.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/YouTube.png" alt="">
+                            </a>
+                        </li>
+                        <li class="social-new">
+                            <a target="_blank" href="#">
+                                <img src="images/icons/TikTok.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footer-set-left">
+                    <div class="tel-divider">
+                        <div class="d-flex align-items-center justify-content-center gap-2">
+                            <img src="images/icons/telephone-logo.jpg" alt="" style="width: 30px">
+                            <a class="text-decoration-none pe-4 text-black"
+                               href="tel:+17867048705">+1 786 704 8705</a>
+                        </div>
+                        <div>
+                            <a class="btn btn-green btn-icon"
+                               href="https://api.whatsapp.com/send?phone=17867048705&amp;text=I'm interested in">
+                                <img src="images/icons/whatsapp-512.png" alt="">
+                                WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white py-3 bg-black m-0">
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            ©2025 Dennis Morales - London Foster
+                        </h5>
+                    </li>
+                    <li>
+                        <h5 class="fs-14px m-0">
+                            777 Brickell Ave #500 Miami, FL 33131
+                        </h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-content">
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="footer-menu">
+                        <li><a href="/">HOME MRG</a></li>
+                        <li><a href="/property-search/">SEARCH</a></li>
+                        <li><a href="/new-developments/">NEW DEVELOPMENTS</a></li>
+                        <li><a href="/miami-homes/">HOUSES</a></li>
+                        <li><a href="/contact-us/">CONTACT </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <div class="old-footer-res">
+                        <img class="promo_logo" alt="Promo Logo" src="images/icons/logos-2016-2.png">
+                        <a href="javascript:void(0);">
+                            <img class="hilton_logo" alt="Hilton Logo" src="images/icons/hilton-2016-2.png">
+                        </a>
+                        <img alt="miami-new-logo" class="hilton_logo"
+                             src="images/icons/Miami-new-logo.png">
+                    </div>
+                </div>
+                <!-- <div class="col-md-6">
+                    <div class="mobile-app-res">
+                        <a href="">
+                            <img alt="Get it on Google Play" style="margin:5px; max-height:40px;height: 40px;"
+                                 src="images/icons/footer-google-play-icon.png"></a>
+                        <a href="">
+                            <img alt="APP Store" style="margin:5px; max-height:40px;"
+                                 src="images/icons/footer-app-store-icon.png.png">
+                        </a>
+
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>
