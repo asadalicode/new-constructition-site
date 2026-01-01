@@ -16,55 +16,111 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: transparent !important;;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
 
-        .heading {
-            font-size: 18px;
-        }
-
-        .para {
-            font-size: small;
-        }
-
+        /* Homepage Specific Styles */
         .banner {
             position: relative;
             text-align: center;
             width: 100%;
             overflow: hidden;
-            background-color: #ff582e !important;
-            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 768px) {
+            .banner {
+                min-height: 50vh;
+            }
         }
 
         .banner img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
 
-        /* .banner::after {
+        /* Dark overlay for better text readability */
+        .banner::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            background: linear-gradient(180deg, rgba(10, 37, 64, 0.4) 0%, rgba(10, 37, 64, 0.6) 100%);
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.3);;
-        } */
-        .banner-text {
+        }
+
+        .banner-content {
             position: relative;
-            color: #fff;
-            padding: 20px;
-            background-color: #ff582e !important;
-            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
-            /* padding-bottom: 0px; */
             z-index: 2;
+            width: 100%;
+            max-width: 800px;
+            padding: var(--spacing-3xl) var(--spacing-xl);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-lg);
+        }
 
+        .banner-content h3 {
+            color: var(--text-white);
+            font-size: var(--font-5xl);
+            font-weight: var(--font-weight-bold);
+            margin: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            letter-spacing: -0.5px;
+            line-height: var(--line-height-tight);
+        }
 
+        .banner-tagline {
+            color: var(--text-white);
+            font-size: var(--font-lg);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+            opacity: 0.95;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .call-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-md) var(--spacing-2xl);
+            font-size: var(--font-lg);
+            font-weight: var(--font-weight-semibold);
+            color: var(--text-white);
+            background: var(--accent-coral);
+            border: none;
+            border-radius: var(--radius-md);
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
+            position: relative;
+            z-index: 10;
+            letter-spacing: 0.3px;
+        }
+
+        .call-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .call-button:active {
+            transform: translateY(0);
         }
 
         .iframe-container {
@@ -72,7 +128,26 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            z-index: 3; /* Ensures iframe is on top */
+            z-index: 3;
+            background: var(--bg-light);
+        }
+
+        /* Loading state for iframe */
+        .iframe-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-light);
+            z-index: 1;
+            transition: opacity var(--transition-base);
+        }
+
+        .iframe-container.loaded::before {
+            opacity: 0;
+            pointer-events: none;
         }
 
         iframe {
@@ -83,54 +158,29 @@
             height: 100%;
             border: none;
             z-index: 2;
+            opacity: 0;
+            transition: opacity var(--transition-base);
         }
 
-        .banner-content {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            /* padding: 0 6px; */
-            /* position: absolute;
-            top: 70px; */
-            /* bottom: 140px; */
-            /* gap:12px */
-
-
+        .iframe-container.loaded iframe {
+            opacity: 1;
         }
 
-        .banner-content h3 {
-            position: absolute;
-            top: 0px;
-            color: #fff;
-            /* margin: auto; */
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .banner-content h3 {
+                font-size: var(--font-4xl);
+            }
+
+            .banner-tagline {
+                font-size: var(--font-base);
+            }
+
+            .call-button {
+                padding: var(--spacing-sm) var(--spacing-xl);
+                font-size: var(--font-base);
+            }
         }
-
-        .call-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            z-index: 10;
-            font-weight: 600;
-            background-color: #ff582e !important;
-            background-image: linear-gradient(270deg, #ffb004 0, #ff582e 100%) !important;
-            border: none;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            position: absolute;
-            bottom: 30px;
-        }
-
-        .call-button:hover {
-            background-color: #0056b3;
-        }
-
-
     </style>
 </head>
 <body>
@@ -146,7 +196,7 @@
                                 <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="new-developments.html">New
+                                <a class="nav-link" href="new-developments.html">New
                                     Developments</a>
                             </li>
                             <li class="nav-item">
@@ -288,17 +338,11 @@
 </header>
 <div class="banner">
     <img src="banner.jpeg" alt="Pre-New Construction Properties in Miami Dade">
-
-
     <div class="banner-content">
-        <h3>Dennis Morales - London foster</h3>
-        </h3>
+        <h3>Dennis Morales</h3>
+        <p class="banner-tagline">London Foster - Luxury Real Estate Specialist</p>
         <a href="tel:(786)7048705" class="call-button">Call Us Now: (786) 704 8705</a>
     </div>
-    <!-- <div class="banner-text">
-        <h3 class="heading">Pre-New Construction Properties</h3>
-        <p class="para">Find your dream home before it’s built in Miami Dade!</p>
-    </div> -->
 </div>
 <div class="iframe-container">
 
@@ -307,5 +351,50 @@
 <script src="js/bootstrap.bundle.js"></script>
 <script async src="https://assets.newestateonly.com/iframe-loader/load.js" data-neokey="64d6fee5b9a0dc7f0225c8f1"
         data-neolang="en"></script>
+<script>
+    // Sticky header with shadow on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Set active nav link based on current page
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+
+        // Mark iframe as loaded when it loads
+        const iframe = document.getElementById('NEOiframe');
+        const iframeContainer = document.querySelector('.iframe-container');
+        
+        if (iframe) {
+            iframe.addEventListener('load', function() {
+                if (iframeContainer) {
+                    iframeContainer.classList.add('loaded');
+                }
+            });
+            
+            // Fallback: mark as loaded after 2 seconds
+            setTimeout(function() {
+                if (iframeContainer && !iframeContainer.classList.contains('loaded')) {
+                    iframeContainer.classList.add('loaded');
+                }
+            }, 2000);
+        }
+    });
+</script>
 </body>
 </html>

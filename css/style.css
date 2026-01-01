@@ -1,35 +1,139 @@
+/* ============================================
+   THEME SYSTEM - Reusable Variables
+   ============================================ */
 :root {
+    /* Primary Colors - Navy/Blue Theme */
+    --primary-navy: #0a2540;
+    --primary-blue: #1e3a5f;
+    --primary-blue-light: #2d4a6b;
+    --accent-coral: #ff6b6b;
+    --accent-gold: #d4af37;
+    
+    /* Legacy Colors (to be phased out) */
     --blue-color: #5D8DB8;
+    --orange-primary: #ff582e;
+    --orange-secondary: #ffb004;
+    
+    /* Neutral Colors */
     --white-color: #ffffff;
     --black-color: #000000;
+    --gray-light: #f8f9fa;
+    --gray-medium: #e9ecef;
+    --gray-dark: #6c757d;
+    --gray-darker: #495057;
+    
+    /* Text Colors */
+    --text-primary: #1a1a2e;
+    --text-secondary: #495057;
+    --text-light: #6c757d;
+    --text-white: #ffffff;
+    
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-dark: #1a1a2e;
+    --bg-navy: #0a2540;
+    
+    /* Typography */
+    --font-primary: "Montserrat", sans-serif;
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    
+    /* Font Sizes - Type Scale */
+    --font-xs: 12px;
+    --font-sm: 14px;
+    --font-base: 16px;
+    --font-lg: 18px;
+    --font-xl: 20px;
+    --font-2xl: 24px;
+    --font-3xl: 28px;
+    --font-4xl: 32px;
+    --font-5xl: 40px;
+    --font-6xl: 48px;
+    
+    /* Line Heights */
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.6;
+    --line-height-loose: 1.8;
+    
+    /* Spacing System (8px base) */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+    --spacing-3xl: 64px;
+    --spacing-4xl: 80px;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+    
+    /* Transitions */
+    --transition-fast: 0.15s ease;
+    --transition-base: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Layout */
     --offcanvas-width: 280px !important;
+    --header-height: 70px;
+    --container-max-width: 1400px;
 }
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    color: var(--black-color);
+    color: var(--text-primary);
+    font-size: var(--font-base);
+    line-height: var(--line-height-relaxed);
+    background-color: var(--bg-white);
 }
 
 @media only screen and (min-width: 1200px) {
     .container {
-        width: 1180px !important;
+        max-width: var(--container-max-width) !important;
+        width: 100%;
+        padding-left: var(--spacing-xl);
+        padding-right: var(--spacing-xl);
     }
 }
 
 header {
-    background: #ffffff;
+    background: var(--bg-white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow var(--transition-base);
+}
+
+header.scrolled {
+    box-shadow: var(--shadow-md);
 }
 
 .header-box {
     width: 100%;
-    height: 52px;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     flex-direction: row;
-
+    padding: var(--spacing-sm) 0;
 }
 
 .menu-box {
@@ -106,9 +210,35 @@ header {
 }
 
 .display-lg .nav-link {
-    font-size: 13px;
-    font-weight: 700;
-    color: #000000;
+    font-size: var(--font-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    letter-spacing: 0.3px;
+    transition: color var(--transition-base);
+    position: relative;
+}
+
+.display-lg .nav-link:hover,
+.display-lg .nav-link.active {
+    color: var(--primary-blue);
+}
+
+.display-lg .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing-md);
+    right: var(--spacing-md);
+    height: 2px;
+    background-color: var(--primary-blue);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.display-lg .nav-link:hover::after,
+.display-lg .nav-link.active::after {
+    transform: scaleX(1);
 }
 
 .flag-box {
@@ -652,4 +782,99 @@ header {
 }
 .rets-btn{
 
+}
+
+/* ============================================
+   REUSABLE UTILITY CLASSES
+   ============================================ */
+
+/* Button Styles */
+.btn-primary {
+    background: var(--primary-navy);
+    color: var(--text-white);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-base);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+    background: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-navy);
+    padding: var(--spacing-md) var(--spacing-2xl);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-base);
+    border: 2px solid var(--primary-navy);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-navy);
+    color: var(--text-white);
+    transform: translateY(-2px);
+}
+
+/* Typography Utilities */
+.text-primary {
+    color: var(--text-primary);
+}
+
+.text-secondary {
+    color: var(--text-secondary);
+}
+
+.text-light {
+    color: var(--text-light);
+}
+
+.text-white {
+    color: var(--text-white);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+/* Spacing Utilities */
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+.mt-2xl { margin-top: var(--spacing-2xl); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+.mb-2xl { margin-bottom: var(--spacing-2xl); }
+.p-lg { padding: var(--spacing-lg); }
+.p-xl { padding: var(--spacing-xl); }
+.p-2xl { padding: var(--spacing-2xl); }
+
+/* Section Spacing */
+.section-spacing {
+    padding-top: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+}
+
+@media (max-width: 768px) {
+    .section-spacing {
+        padding-top: var(--spacing-2xl);
+        padding-bottom: var(--spacing-2xl);
+    }
 }

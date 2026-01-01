@@ -1,17 +1,258 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>New Development</title>
+    <title>New Construction Miami - New Developments</title>
+    <meta name="description" content="Discover the complete list of all residential condominium projects in pre-construction, under construction, and recently completed in Miami.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* New Developments Page Specific Styles */
+        body {
+            background: var(--bg-light);
+        }
+
+        .hero-section {
+            padding-top: var(--spacing-3xl);
+            padding-bottom: var(--spacing-2xl);
+            background: var(--bg-white);
+        }
+
+        .title-1 {
+            font-size: var(--font-5xl);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-lg);
+            line-height: var(--line-height-tight);
+        }
+
+        .hero-text {
+            font-size: var(--font-lg);
+            color: var(--text-secondary);
+            line-height: var(--line-height-relaxed);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .new-dev-banner {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: transform var(--transition-base);
+        }
+
+        .new-dev-banner:hover {
+            transform: scale(1.01);
+        }
+
+        .title-2 {
+            font-size: var(--font-3xl);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        /* Property Card Improvements */
+        .post-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-base);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid var(--gray-medium);
+        }
+
+        .post-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+
+        .post-info {
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+            padding: var(--spacing-md);
+            text-decoration: none;
+            color: inherit;
+            transition: background-color var(--transition-base);
+        }
+
+        .post-info:hover {
+            background-color: var(--bg-light);
+        }
+
+        .post-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            flex-shrink: 0;
+        }
+
+        .building_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: var(--spacing-xs);
+            flex: 1;
+        }
+
+        .post-title {
+            font-size: var(--font-xl);
+            color: var(--text-primary);
+            font-weight: var(--font-weight-bold);
+            margin: 0 0 var(--spacing-xs) 0;
+            line-height: var(--line-height-tight);
+        }
+
+        .neighborhood, .building_year {
+            font-size: var(--font-base);
+            font-weight: var(--font-weight-medium);
+            color: var(--text-secondary);
+        }
+
+        .building_status {
+            font-size: var(--font-base);
+            font-weight: var(--font-weight-semibold);
+            color: var(--primary-blue);
+            margin-top: var(--spacing-xs);
+        }
+
+        /* Order By Button Improvements */
+        .order-by {
+            display: flex;
+            align-items: center;
+            color: var(--text-white);
+            height: 60px;
+            padding: 0 var(--spacing-lg);
+            gap: var(--spacing-md);
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            transition: all var(--transition-base);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .order-by:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .order-by.blue {
+            background: var(--primary-blue);
+        }
+
+        .order-by.light-blue {
+            background: var(--primary-blue-light);
+        }
+
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--text-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-box svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--text-white);
+        }
+
+        .text-box {
+            font-size: var(--font-lg);
+            font-weight: var(--font-weight-semibold);
+        }
+
+        /* Social Networks Section */
+        .social_networks {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            background: var(--gray-medium);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+            border-radius: var(--radius-md);
+            gap: var(--spacing-md);
+        }
+
+        .social-new {
+            margin: 0;
+        }
+
+        .social-new a {
+            display: inline-block;
+            transition: transform var(--transition-base);
+        }
+
+        .social-new a:hover {
+            transform: translateY(-3px) scale(1.1);
+        }
+
+        .social-new img {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* Footer Contact Section */
+        .footer-set-left {
+            background: var(--bg-white);
+            padding: var(--spacing-xl) 0;
+            margin: var(--spacing-2xl) 0;
+            border-radius: var(--radius-md);
+        }
+
+        .tel-divider {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: var(--spacing-lg);
+        }
+
+        /* Section Spacing */
+        section {
+            padding: var(--spacing-3xl) 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title-1 {
+                font-size: var(--font-4xl);
+            }
+
+            .title-2 {
+                font-size: var(--font-2xl);
+            }
+
+            .post-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .post-title {
+                font-size: var(--font-lg);
+            }
+        }
+    </style>
 </head>
-<body style="background: #F7F7F7">
+<body>
     <header>
         <div class="container">
             <div class="header-box">
@@ -21,7 +262,7 @@
                         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="new-developments.html">New
@@ -408,7 +649,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white py-3 bg-black m-0">
+                <ul class="d-flex align-items-center justify-content-center gap-2 list-unstyled text-white py-3 m-0" style="background: var(--primary-navy);">
                     <li>
                         <h5 class="fs-14px m-0">
                             ©2025 Miami Residential Group Inc.
@@ -422,17 +663,17 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-content">
+        <div class="footer-content" style="background: var(--primary-blue);">
 
 
             <div class="row">
                 <div class="col-md-12">
                     <ul class="footer-menu">
-                        <li><a href="/">HOME MRG</a></li>
-                        <li><a href="/property-search/">SEARCH</a></li>
-                        <li><a href="/new-developments/">NEW DEVELOPMENTS</a></li>
-                        <li><a href="/miami-homes/">HOUSES</a></li>
-                        <li><a href="/contact-us/">CONTACT </a></li>
+                        <li><a href="index.html">HOME MRG</a></li>
+                        <li><a href="index.html">SEARCH</a></li>
+                        <li><a href="new-developments.html">NEW DEVELOPMENTS</a></li>
+                        <li><a href="luxury-condos.html">HOUSES</a></li>
+                        <li><a href="index.html">CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="col-md-12">
@@ -462,5 +703,31 @@
     </div>
 </footer>
 <script src="js/bootstrap.bundle.js"></script>
+<script>
+    // Sticky header with shadow on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Set active nav link based on current page
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'new-developments.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('href');
+            if (linkPage === currentPage) {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
